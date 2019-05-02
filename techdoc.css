@@ -1,0 +1,43 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+#main-doc {
+
+}
+
+.main-section {
+
+}
+
+#client_configuration {
+
+}
+
+#fiscal_calendar {
+
+}
+
+#divisions {
+
+}
+
+#user_classes {
+
+}
+
+#user_groups {
+
+}
+
+#navbar {
+	position: fixed;
+}
+
+.nav-link {
+
+}
+
+@media
