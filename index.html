@@ -2,53 +2,134 @@
 <html>
 <head>
 	<title>Technical Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="techdoc.css">
 </head>
 <body>
+
 <main id="main-doc">
-	
-	<h1></h1>
 
-	<section class="main-section">
-		<h2 id="client_configuration"></h2>
-		<p></p>
-		<p></p>
+	<section class="main-section" id="client_configuration">
+		<header>Client Configuration</header>
+		<p>
+			<div>'Division' needs to be made a required field</div>
+			<code>
+			<ul>
+				<li>Navigate to Admin Access -> Client Configuration -> Field Conf</li>
+				<li>On the Field Conf page, use the panel on the left to navigate to the Dynamic tab</li>
+				<li>Under this tab, navigate to Products -> Product Summary where you will see a list of fields that encompass the Primary Details page of product set up</li>
+				<li>Find ‘Division’ on this list and then, in the Mandatory column, check the checkbox</li>
+				<li>Scroll down to the bottom and hit Save</li>
+			</ul>
+			</code>
+		</p>
+
+		<div class="italicText">
+		<em>See screenshot below for reference</em> <br>
+		<img src="images/client_config.png" alt="Instructions" width="500" height="310">
+		</div>
+<br><br>
+		<p>
+			<div>Change all instances of the word <code>‘Network’</code> to <strong>‘Category’</strong></div>
+			<ul>
+				<li><em>This primarily shows up in the client facing Basic Reports</em></li>
+				<li>Navigate to Admin Access -> Client Configuration -> Dashboard Parameters</li>
+				<li>Go into Basic Reports Header and Basic Reports (and each sub section), and change all instances of the word ‘Network’ to <strong>‘Category’</strong></li>
+			</ul>
+		</p>
 	</section>
 
-	<section class="main-section">
-		<h2 id="fiscal_calendar"></h2>
-		<p></p>
-		<p></p>
+	<section class="main-section" id="fiscal_calendar">
+		<header>Fiscal Calendar</header>
+		<p>
+			Navigate to the ‘Client Configuration’ section located under the ‘Admin Access’ dropdown -> Go to the ‘Dashboard Parameters’ tab.
+		</p>
+		<p>
+			<ul>
+				<li>This window allows you to set up the billing periods for the client</li>
+				<li>Using the two fields provided, supply a Start and End date for a billing period</li>
+				<li>Hit the Save button</li>
+				<li>Repeat this process for the remaining billing periods you wish to add</li>
+			</ul>
+		</p>
 	</section>
 
-	<section class="main-section">
-		<h2 id="divisions"></h2>
-		<p></p>
-		<p></p>
+	<section class="main-section" id="divisions">
+		<header>Divisions</header>
+		<p>
+			Navigate to the <code>‘Client Configuration’</code> section located under the <code>‘Admin Access’</code> dropdown.
+		</p>
+		<p>
+			<ul>
+				<li>Go to the ‘Division Mgmt’ tab</li>
+				<li>Click the ‘Add Division’ button</li>
+				<li><strong>The Account manager should be able to supply a list of divisions</strong></li>
+				<li>Fill out the fields and hit ‘Save’</li>
+				<li><strong>Note: All Divisions you add should be in ‘ALL CAPS’</strong></li>
+				<li>Repeat this process until all Divisions have been created for that client</li>
+				<li>Make sure you create an ‘ADMIN’ division as well to be used by CI-Group administrators</li>
+			</ul>
+		</p>
 	</section>
 
-	<section class="main-section">
-		<h2 id="user_classes"></h2>
-		<p></p>
-		<p></p>
+	<section class="main-section" id="user_classes">
+		<header>User Classes</header>
+		<p>
+			Navigate to the ‘User Class’ section located under the ‘Admin Access’ dropdown
+		</p>
+		<p>
+			<ul>
+				<li>Click on the ‘Add User Class’ button</li>
+				<li>We are only concerned with the fields under the ‘User Class Information’ section</li>
+				<li><strong>To fill out these fields, you will need to contact the CSR for that client and obtain a list of User Class names and numbers from them</strong></li>
+				<li>Make sure the ‘Is Active’ checkbox is checked</li>
+				<li>Fill out the required fields in this section and hit ‘Save’</li>
+				<li>Repeat this process until all User Classes have been created for that client</li>
+				<li>
+					<span>Make sure you create a ‘CI Admin’ user class as well</span>
+					<ul>
+						<li>Use 101 as the number value for this user class</li>
+						<li>Set the ‘Division’ to ‘Admin’</li>
+					</ul>
+				</li>
+			</ul>
+		</p>
 	</section>
 
-	<section class="main-section">
-		<h2 id="user_groups"></h2>
-		<p></p>
-		<p></p>
+	<section class="main-section" id="user_groups">
+		<header>User Groups</header>
+		<p>
+			<div>Navigate to the <code>‘User Group’</code> section located under the ‘Admin Access’ dropdown</div>
+			<ul>
+				<li>Setting up new User Groups can be a little tricky to explain so I’ll be as thorough as I can</li>
+			</ul>
+		</p>
+		<p>
+			<span class="redText">Note: User Groups control who can approve orders and who cannot.</span> <strong>They also control the Order History screen that the users will see when they navigate there.</strong> <code>This is important because in most cases we only want the client users to see the more limited screen.</code> We usually don’t want them to have access to approving the orders and changing the carrier/ship method.
+		</p>
 	</section>
+</main>
 
 	<nav id="navbar">
-		<h2></h2>
+		<header id="h1">Navigation</header>
 
-		<a href="#test" class="nav-link">Client Configuration</a>
-		<a href="" class="nav-link">Fiscal Calendar</a>
-		<a href="" class="nav-link">Divisions</a>
-		<a href="" class="nav-link">User Classes</a>
-		<a href="" class="nav-link">User Groups</a>
+		<div class="nav-div">
+			<a href="#client_configuration" class="nav-link">Client Configuration</a>
+		</div>
+		<div class="nav-div">
+			<a href="#fiscal_calendar" class="nav-link">Fiscal Calendar</a>
+		</div>
+		<div class="nav-div">
+			<a href="#divisions" class="nav-link">Divisions</a>
+		</div>
+		<div class="nav-div">
+			<a href="#user_classes" class="nav-link">User Classes</a>
+		</div>
+		<div class="nav-div">
+			<a href="#user_groups" class="nav-link">User Groups</a>
+		</div>
+
 	</nav>
 
-</main>
 </body>
 </html>
