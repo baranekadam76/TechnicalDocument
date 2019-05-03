@@ -5,11 +5,14 @@
 */
 }
 
+html, body {
+	min-width: 290px;
+}
+
 #main-doc {
-	max-width: 1600px;
-	height: auto;
+	position: absolute;
+	margin-left: 310px;
 	font-family: sans-serif, verdana;
-	float: right;
 }
 
 header {
@@ -53,12 +56,15 @@ header {
 
 
 #navbar {
-	max-width: 300px;
+	min-width: 290px;
+	width: 300px;
 	height: 100%;
 	float: left;
 	background-color: #F1F1F1;
 	font-family: sans-serif, verdana;
 	position: fixed;
+	top: 0px;
+	left: 0px;
 	border-right: 2px solid black;
 }
 
@@ -103,12 +109,21 @@ header {
 
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
 	#navbar {
-		width: 100%;
-		max-height: 100%;
 		position: absolute;
-		float: none;
+		top: 0;
+		padding: 0;
+		margin: 0;
+		min-width: 500px;
+		max-height: 425px;
 		border-right: none;
+	}
+	#main-doc {
+		position: relative;
+		margin-left: 0px;
+		margin-top: 450px;
+		padding-left: 20px;
+		min-width: 480px;
 	}
 }
