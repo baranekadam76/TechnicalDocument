@@ -25,7 +25,7 @@ header {
 }
 
 #client_configuration {
-
+	color: red;
 }
 
 .italicText {
@@ -34,19 +34,19 @@ header {
 }
 
 #fiscal_calendar {
-
+	color: red;
 }
 
 #divisions {
-
+	color: red;
 }
 
 #user_classes {
-
+	color: red;
 }
 
 #user_groups {
-
+	color: red;
 }
 
 .redText {
